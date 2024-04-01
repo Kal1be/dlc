@@ -80,7 +80,7 @@ const editComment = async (req,res,next)=>{
         }
 
         if(comment.userId !== req.user.id && !req.user.isAdmin){
-            return next(errorHandler(402,"you are not allwoed to edit this post"))
+            return next(errorHandler(402,"you are not allow to edit this post"))
         }
 
         const editComment = await Comment.findByIdAndUpdate(
@@ -138,14 +138,15 @@ const getComments = async(req,res,next)=>{
         const now = new Date()
 
         const oneMonthAgo = new Date(
-            now.getFullYear(),now.getMonth()-1,now.getDate()
+            now.getFullYear(),
+            now.getMonth() -1,
+            now.getDate(),
         )
 
         const lastMonthAgo = await Comment.countDocuments({createdAt:{$gte:oneMonthAgo}})
         
 
         res.status(200).json({comments,totalComments,lastMonthAgo})
-           console.log(comments)
 
     } catch (error) {
         next(error)

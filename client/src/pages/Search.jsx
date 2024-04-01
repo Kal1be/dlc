@@ -1,4 +1,5 @@
-import { Select, Sidebar, Spinner, TextInput } from "flowbite-react"
+import {  Spinner, TextInput } from "flowbite-react"
+import { AiOutlineSearch } from "react-icons/ai"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import PostCard from "../component/PostCard"
@@ -7,14 +8,16 @@ function Search() {
   const [sideBar,setSideBar] = useState({
     searchTerm:"",
     sort:"desc",
-    category:"uncategorized"
+    category:"uncathegorized"
   })
   const [posts,setPosts] = useState([])
   const [showMore,setShowMore] = useState(false)
   const [loading,setLoading] = useState(false)
-console.log(posts)
+
+
   useEffect(()=>{
-    const urlParams =new URLSearchParams(location.search)
+    const urlParams = new URLSearchParams(location.search)
+    console.log(urlParams)
     const searchTermFromUrl = urlParams.get("searchTerm")
     const sortFromUrl = urlParams.get("sort")
     const categoryFromUrl = urlParams.get("category")
@@ -28,8 +31,10 @@ console.log(posts)
       })
     }
 
+    // the search query function for get the data from the database 
+
+
     const fetchPost =async()=>{
-      setLoading(true)
       const searchQuery = urlParams.toString()
       const res = await fetch(`/api/post/getposts?${searchQuery}`)
       const data = await res.json()
@@ -41,6 +46,7 @@ console.log(posts)
       
       if(res.ok){
         setPosts(data.posts)
+        console.log(data.posts)
         setLoading(false)
 
         if(data.posts.length === 9){
@@ -81,8 +87,8 @@ console.log(posts)
     e.preventDefault()
     const urlParams = new URLSearchParams(location.search)
     urlParams.set("searchTerm",sideBar.searchTerm)
-    urlParams.set("sort",sideBar.sort)
-    urlParams.set("category",sideBar.category)
+    // urlParams.set("sort",sideBar.sort)
+    // urlParams.set("category",sideBar.category)
 
     const searchQuery = urlParams.toString()
     navigate(`/search?${searchQuery}`)
@@ -92,7 +98,8 @@ console.log(posts)
   const handleShow = async ()=>{
    try {
     
-    const numberOfPosts = posts.length;
+    const numberOfPosts =posts.length;
+
     const startIndex = numberOfPosts
 
     const urlParams = new URLSearchParams(location.search)
@@ -125,13 +132,13 @@ console.log(posts)
     <div className="flex flex-col md:flex-row">
     <div className="p-7 border-b md:border-r md:min-h-screen dark:border-gray-600  ">
       <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
-        <div className="flex items-center gap-2 ">
-          <label className="whitespace-nowrap font-semibold">Seach Term:</label>
-          <TextInput type="text" value={sideBar.searchTerm}
-           placeholder="Search..." id="searchTerm" onChange={handleChange}/>
+        <div className="md:flex items-center gap-2 ">
+          <label className="whitespace-nowrap font-semibold">Search Term:</label>
+          <TextInput type="text" className="w-full" value={sideBar.searchTerm}
+           placeholder="Search for post..." id="searchTerm"  rightIcon={AiOutlineSearch}  onChange={handleChange}/>
 
         </div>
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
          <label className="font-semibold ">Sort:</label>
          <Select className="" onChange={handleChange} id="sort" value={Sidebar.sort}>
           <option value="desc">Latest</option>
@@ -141,12 +148,12 @@ console.log(posts)
         <div className="flex items-center gap-2">
          <label className="font-semibold ">Category:</label>
          <Select className="" onChange={handleChange} id="category" value={Sidebar.category}>
-          <option value="uncategorized">Uncategorized</option>
+          <option value="uncathegorized">Uncategorized</option>
           <option value="reactjs">React.js</option>
           <option value="nextjs">Next.js</option>
           <option value="mastery">Mastery</option>
          </Select>
-        </div>
+        </div> */}
         <button type="submit"
          className="border px-4 py-2 hover:bg-gray-300 rounded-lg ">Apply Filters</button>
       </form>

@@ -61,11 +61,8 @@ if(res.ok){
   autoPlay={true}
   autoPlaySpeed={3000}
   keyBoardControl={true}
-  // customTransition="all .5"
-  // transitionDuration={500}
   containerClass="carousel-container"
   removeArrowOnDeviceType={["tablet", "mobile"]}
-  // deviceType={this.props.deviceType}
   dotListClass="custom-dot-list-style"
   itemClass="carousel-item-padding-20-px"
    className="btn"
@@ -83,7 +80,7 @@ if(res.ok){
       <div className="max-w-3xl px-2 flex mt-12 w-full mx-auto mb-10 md:mx-4">
   <div>
   <h2 className="md:text-5xl  text-2xl font-bold mt-2 mb- text-green-600">Welcome to Distance Learning Center</h2>
-        <p className="text-gray-500 my-4 text-xs sm:text-sm">Distance Learning Center is a platform for online course for
+        <p className="text-gray-500 my-4 text-lg">Distance Learning Center is a platform for online course for
            AHmadu Bello university,the platform are building for integrating
             the teaching of school online for everybody and anyone in the world who want to school in ABU.</p>
             <Link to='search'className="text-xs sm:text-sm text-teal-500 font-bold hover:underline">View all posts</Link>

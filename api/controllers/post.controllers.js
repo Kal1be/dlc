@@ -3,9 +3,9 @@ const Post = require("../model/post.model")
 
 
 const create = async(req,res,next)=>{
-// if(!req.body.isAdmin){
-//     return next(errorHandler(403,"bad credentiels !"))
-// }
+if(!req.user.isAdmin){
+    return next(errorHandler(403,"bad credentiels !"))
+}
 if(!req.body.title || !req.body.content){
     return next(errorHandler(400,"please provide all required fields !"))
 }

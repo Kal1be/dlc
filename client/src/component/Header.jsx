@@ -40,7 +40,7 @@ useEffect(()=>{
    <img src="/abuimage.png" alt="" className="md:h-12 h-10 md:w-full w-44" />
     </Link>
     <form onSubmit={handleSubmit}>
-        <TextInput type="text" placeholder="search" value={searchTerm} rightIcon={AiOutlineSearch} onChange={(e)=>{
+        <TextInput type="text" placeholder="search for post ..." value={searchTerm} rightIcon={AiOutlineSearch} onChange={(e)=>{
             setSearchTerm(e.target.value)
         }} className="hidden lg:inline"/>
     </form>
