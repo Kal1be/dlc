@@ -37,11 +37,6 @@ useEffect(()=>{
   return (
    <Navbar className="border-b-2 bg-[#04453e] sticky top-0 text-white px-0 z-50 items-center">
 <Link to="/" className="md:self-center flex items-center gap-2 font-medium whitespace-nowrap">
-    {/* <span className="px-2 md:py-2 py-1   bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 rounded-lg text-white">Kalibe`s </span> <span> Blog</span> */}
-  {/* <img src={theme==="light"?"/icon.jpg":"/icon2.jpg" }  className="md:w-12 rounded-full md:h-12 w-10 h-10" alt="" />
-   <h2>
-   <span className="text-blue-800">AnasDev</span> <span className="text-green-700">Institute</span>
-   </h2> */}
    <img src="/abuimage.png" alt="" className="md:h-12 h-10 md:w-full w-44" />
     </Link>
     <form onSubmit={handleSubmit}>
@@ -50,7 +45,9 @@ useEffect(()=>{
         }} className="hidden lg:inline"/>
     </form>
         <Button className="md:w-12 w-10 h-10 md:h-10 lg:hidden outline-none " pill  color="gray">
-<AiOutlineSearch/>
+            <Link to={'/search'}>
+                <AiOutlineSearch/>   
+            </Link>
        </Button>
         <div className="flex md:gap-8 gap-0 items-center md:order-2">
             <button className="w-10 border border-gray-300 rounded-full h-10 hidden sm:inline"  onClick={()=>{
@@ -75,8 +72,8 @@ useEffect(()=>{
                     Signout
                 </Dropdown.Item>
             </Dropdown>):<Link to="/sign-in">
-                <Button gradientDuoTone="purpleToBlue" outline className="border  border-purple-500 md:py-0 md:px-0 -p-2">
-                    Sign in</Button>
+                <button className="border bg-green-800 py-1 px-3 hover:bg-green-600 text-white">
+                    Sign in</button>
             </Link>}
         </div>
           <Navbar.Toggle/>

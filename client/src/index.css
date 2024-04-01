@@ -53,6 +53,16 @@ body{
     }
 }
 
+.btn button {
+    z-index: 1;
+    /* display: none; */
+    opacity: .5;
+}
+
+.btn button .active{
+    background:green !important;
+}
+
 
 .post-content{
 font-size: 1.05rem;
