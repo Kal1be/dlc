@@ -30,10 +30,12 @@ function App() {
   if(!loading){
     return (
    
-       <div className="bg-white  flex justify-center items-center h-[100vh] p-0 !m-0 overflow-y-hidden">
+       <div className="flex justify-center items-center h-[100vh] p-0 !m-0 overflow-y-hidden">
      <div>
-     <img src="/abu-logo.jpg" alt="my-icon image" className="my-image w-72 h-72 object-cover p-6 shadow-2xl"/>
-        <span className="text-center px-[53px] -mt-24 absolute">Distance Learning Center</span>
+     <div className="my-image shadow-2xl">
+     <img src="/logo.png" alt="my-icon image" className=" w-72 h-72 scale-100 p-6 object-center shadow-2xl"/>
+     </div>
+        <span className="text-center absolute px-16 text-sm -mt-24">Distance Learning Center</span>
      </div>
        </div>
     )

@@ -6,7 +6,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 
-
+// the responsive given by the react multi carousel 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -29,6 +29,9 @@ const responsive = {
 function Home() {
   const [post,setPost] = useState([])
 
+
+  // the api call by the useEffect hooks 
+
   useEffect(()=>{
 
     const fetchPosts = async ()=>{
@@ -43,6 +46,9 @@ if(res.ok){
 
     fetchPosts()
   },[])
+
+  // the return of the function 
+  // the function return the carousel,
   return (
     <div className="max-w-7xl mx-auto w-full md:mt-6 mt-1 px-1  md:px-0 mb-10">
 
@@ -69,10 +75,10 @@ if(res.ok){
     <img src="./ahmadu.jpg" className="w-screen h-full" alt="" />
   </div>
   <div  className="w-full h-[300px] md:h-[550px] " >
-    <img src="./nice.jpg" className="w-screen h-full" alt="" />
+    <img src="./abu1.jpeg" className="w-screen h-full" alt="" />
   </div>
   <div  className="w-full h-[300px] md:h-[550px] ">
-    <img src="./dlc.jpg" className="w-screen h-full" alt="" />
+    <img src="./abu-get.jpg" className="w-screen h-full" alt="" />
   </div>
 </Carousel>
       <div className="max-w-3xl px-2 flex mt-12 w-full mx-auto mb-10 md:mx-4">
