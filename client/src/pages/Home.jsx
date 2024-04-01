@@ -98,7 +98,7 @@ if(res.ok){
       { post && post.length >0 && (
   <div className="flex flex-col gap-6">
     <h1 className="text-2xl font-semibold text-center">Recent Posts</h1>
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap justify-center gap-4">
       {post.map((pos)=>(
         <Postcard key={pos._id} post={pos}/>
       ))}
