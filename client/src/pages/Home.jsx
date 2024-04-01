@@ -40,7 +40,6 @@ function Home() {
 
 if(res.ok){
   setPost(data.posts)
-  console.log(data.posts)
 }
     }
 
@@ -54,8 +53,8 @@ if(res.ok){
 
 <Carousel
   swipeable={true}
-  draggable={true}
-  showDots={true}
+  draggable={"tablet"}
+  showDots={false}
   responsive={responsive}
   ssr={true} // means to render carousel on server-side.
   infinite={true}
@@ -72,7 +71,7 @@ if(res.ok){
    className="btn"
 >
   <div className="w-full h-[300px] md:h-[550px] ">
-    <img src="./ahmadu.jpg" className="w-screen h-full" alt="" />
+    <img src="./Last.png" className="w-screen h-full" alt="" />
   </div>
   <div  className="w-full h-[300px] md:h-[550px] " >
     <img src="./abu1.jpeg" className="w-screen h-full" alt="" />
