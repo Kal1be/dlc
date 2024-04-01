@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const PostCard = ({ post }) => {
     
   return (
-    <div className='group mt-6 relative w-full shadow-sm border p-6 md:p-0 rounded-lg sm:w-[350px] scrollbar h-[370px] overflow-hidden'>
+    <div className='group mt-6 relative w-full shadow-sm border p-6 md:p-4 rounded-lg sm:w-[350px] scrollbar h-[370px] overflow-hidden'>
       <Link to={`/post/${post.slug}`}>
         <img src={post.image} alt="" className='md:h-[230px] h-[220px] w-full object-cover 
         group-hover:h-[200px] transition-all duration-300 z-20' />
