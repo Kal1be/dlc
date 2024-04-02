@@ -46,7 +46,7 @@ const navigate = useNavigate()
 
   if(res.ok){
     dispatch(signInSuccess(data))
-    navigate("/dashboard?tab=dash")
+    navigate("/dashboard")
   }
   
  } catch (error) {
