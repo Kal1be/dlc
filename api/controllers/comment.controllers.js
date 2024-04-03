@@ -121,7 +121,7 @@ const deleteComment =async (req,res,next)=>{
 
 const getComments = async(req,res,next)=>{
     if(!req.user.isAdmin){
-        return next(errorHandler(403,"you are not allowed to get all comments"))
+        return next(errorHandler(403,"you are not allowed to see all comments"))
     }
     try {
         const startIndex = parseInt(req.query.startIndex) || 0

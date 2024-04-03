@@ -67,13 +67,13 @@ if(res.ok){
   itemClass="carousel-item-padding-20-px"
    className="btn"
 >
-  <div className="w-full h-[300px] md:h-[550px] ">
-    <img src="./Last.png" className="w-screen h-full" alt="" />
+  <div className="w-full h-full md:h-[550px] ">
+    <img src="./ahmadu.jpg" className="w-screen h-full" alt="" />
   </div>
-  <div  className="w-full h-[300px] md:h-[550px] " >
+  <div  className="w-full h-full md:h-[550px] " >
     <img src="./abu1.jpeg" className="w-screen h-full" alt="" />
   </div>
-  <div  className="w-full h-[300px] md:h-[550px] ">
+  <div  className="w-full h-full md:h-[550px] ">
     <img src="./abu-get.jpg" className="w-screen h-full" alt="" />
   </div>
 </Carousel>

@@ -160,7 +160,7 @@ console.log(comment)
     </Link>
      </div>
             ):(
-                <div className="text-teal-500 my-5 ">you must be signed in to comment<Link to={"/sign-in"} className="text-sm text-red-400">Sign-in</Link></div>
+                <div className="text-teal-500 my-5 ">you must be signed in to comment <Link to={"/sign-in"} className="text-sm text-red-400 px-2 ">Sign-in</Link></div>
             )
         }
 

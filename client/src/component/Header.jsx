@@ -78,7 +78,7 @@ useEffect(()=>{
         </div>
           <Navbar.Toggle/>
             <Navbar.Collapse>
-                <div className=" border flex w-[160px] mx-2 p-1 text-white rounded-full sm:hidden items-center gap-2 ">
+                <div className=" border flex w-[160px] mx-2 my-3 p-1 text-white rounded-full sm:hidden items-center gap-2 ">
             <button className="w-10 border border-gray-300 rounded-full h-10 inline sm:hidden"  onClick={()=>{
                     dispatch(toggleTheme())
                 }}>

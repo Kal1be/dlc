@@ -1,6 +1,6 @@
 import {Footer} from "flowbite-react"
 import {Link} from "react-router-dom"
-import {BsFacebook,BsInstagram,BsTwitterX,BsGithub,BsWhatsapp} from "react-icons/bs"
+import {BsFacebook,BsInstagram,BsTwitterX,BsWhatsapp} from "react-icons/bs"
 // import { useSelector } from "react-redux"
 
 function FooterCom() {
@@ -57,21 +57,20 @@ Kaduna State, Nigeria.</p>
         </div>
        </div>
      </div>
-     <div className="mt-12 flex justify-between items-center w-full mb-1">
-       <h2 className="text-xl font-bold dark:text-white text-gray-400 "> Follow Us:</h2>
+     <div className="mt-12 flex justify-between items-center w-full">
+       <h2 className="text-xl font-medium dark:text-white font-sans text-gray-400 "> Follow Us:</h2>
        <div className="flex md:gap-8 gap-4">
 <Footer.Icon href="#" icon={BsFacebook}/>
 <Footer.Icon href="#" icon={BsInstagram}/>
-<Footer.Icon href="#" icon={BsGithub}/>
 <Footer.Icon href="#" icon={BsTwitterX}/>
 <Footer.Icon href="#" icon={BsWhatsapp}/>
        </div>
      </div>
 <Footer.Divider/>
 <div className="md:flex justify-between  text-xs dark:text-white text-slate-600 w-full font-medium"> 
-    <h2 className="mt-2">Copyright Distance Learning Center</h2>
+    <h2 className="mt-2">Developed by Devsoftware Yahoulbo</h2>
     <h2 className="flex mt-2 gap-1 items-center">
-      <Footer.Copyright by="Yahoulbo DevSoftware" year={new Date().getFullYear()} className="dark:text-white text-slate-600 text-xs font-medium"/> <span></span>
+      <Footer.Copyright by="Copyright Distance Learning Center" year={new Date().getFullYear()} className="dark:text-white text-slate-600 text-xs font-medium"/> <span></span>
     </h2>
 </div>
     </Footer>

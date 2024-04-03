@@ -18,7 +18,7 @@ function About() {
           <div className="flex-1">
             <h2 className="text-blue-900 dark:text-gray-200 text-xl font-medium my-4">Welcome to Ahmadu Bello University</h2>
             <hr className="border border-green-600 w-56 my-4"/>
-            <h2 className="text-3xl text-blue-950 italic">ABU Vision</h2>
+            <h2 className="text-3xl text-blue-950 font-sans font-medium">ABU Vision</h2>
           <h2 className="text-xl font-medium my-3">According to Sir Ahmadu Bello</h2>
             <p className="my-p text-xl font-sans text-gray-400">``Ahmadu Bello University shall be 
               a world-class university comparable 
